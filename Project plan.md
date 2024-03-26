@@ -8,7 +8,7 @@ With movies card, person can bookmark and buy. Buy meaning, he/she has to go ext
 With search button, person can search films.
 Here is the coding structure. 
 
-# /*-------API------*/
+### /*-------API------*/
 
 api key=''
 access token=''
