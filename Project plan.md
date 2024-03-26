@@ -8,7 +8,7 @@ With movies card, person can bookmark and buy. Buy meaning, he/she has to go ext
 With search button, person can search films.
 Here is the coding structure. 
 
-### /*-------API------*/
+### / -------API------ /
 
 api key=''
 access token=''
@@ -23,7 +23,7 @@ access token=''
 -> getFilmCategories()
     fetch(url)
 
-### /* ........Bookmarks
+### / ........Bookmarks
 
 createBookmark(bookmarkItem)
     check local storage => local Bookmarks
@@ -38,7 +38,7 @@ removeBookmark(bookmarkId)
     filter movies
     setItemToLocalStorage
 
-### /* .............upload movies to body
+### / .............upload movies to body
 
 --> Movies header
     title My Favorites Movies
@@ -62,6 +62,6 @@ removeBookmark(bookmarkId)
 
 ### /* ......utils ......
 
-    -->readMore(id)
+    --> readMore(id)
     --> films details page()
-        title p, descrion(summary of the film) p, poster img, 
+        title p, description(summary of the film) p, poster img, 
