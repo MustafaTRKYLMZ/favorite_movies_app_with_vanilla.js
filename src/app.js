@@ -1,3 +1,9 @@
-window.addEventListener('load',()=>{
-    console.log("Hello every one")
-})
+'use strict';
+
+import { welcomePage } from './pages/welcomePage.js';
+
+const loadApp =()=>{
+ welcomePage()
+}
+
+window.addEventListener('load',loadApp)

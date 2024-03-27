@@ -211,6 +211,7 @@ data
     getMovies.js
 
     searchMovie.js
+    setMoviesToLocal.js
 
     getBookmarkedMovieList.js
 
@@ -219,5 +220,5 @@ data
     setBookmarkedMovie.js
 
     getMovieListFromLocal.js
-    
+
     setMovieListToLocal.js
