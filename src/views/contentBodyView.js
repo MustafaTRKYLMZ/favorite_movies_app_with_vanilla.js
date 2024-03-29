@@ -10,10 +10,10 @@ leftSidebarDiv.classList.add('left-sidebar')
 const movieListDiv = document.createElement('div')
 movieListDiv.classList.add('movie-list')
 //bookmark list
-const bookmarkListDiv = document.createElement('div')
-bookmarkListDiv.classList.add('bookmark-list')
+const bookmarkDiv = document.createElement('div')
+bookmarkDiv.classList.add('bookmark')
 
-contentBodyDiv.append(leftSidebarDiv,movieListDiv,bookmarkListDiv)
+contentBodyDiv.append(leftSidebarDiv,movieListDiv,bookmarkDiv)
 document.body.append(contentBodyDiv)
 
 }

@@ -1,14 +1,14 @@
 import { getImageUrl } from "../data/index.js";
+import { createBookmark, movieDetail } from "../pages/index.js";
+
 
 export const movieCard=(movie)=>{
    
     const movieList=document.querySelector('.movie-list')
-
+    //image
     const imageUrl=getImageUrl(movie)
-    console.log("movie in card image url ",imageUrl)
     const movieCardDiv=document.createElement('div')
     movieCardDiv.classList.add('movie-card')  
-
     const image=document.createElement('IMG')
     movieCardDiv.append(image)
     image.src=imageUrl
@@ -43,13 +43,14 @@ export const movieCard=(movie)=>{
     linkA.setAttribute('href','https://www.moviemeter.nl/film/1153939')
     // bookmark
     const bookmarkIcon=document.createElement('i')
-    bookmarkIcon.setAttribute('onclick', 'createBookmark()')
+    bookmarkIcon.addEventListener('click', createBookmark)
+    bookmarkIcon.setAttribute('id',movie.id)
     bookmarkIcon.classList.add('material-icons')
     bookmarkIcon.append("bookmark")
     
     const detailIcon=document.createElement('i')
     detailIcon.classList.add('material-icons')
-    detailIcon.setAttribute('onclick', 'movieDetail()')
+    detailIcon.addEventListener('click', movieDetail)
     detailIcon.append('more')
     buttonGroupDiv.append(linkA,bookmarkIcon,detailIcon)
     
