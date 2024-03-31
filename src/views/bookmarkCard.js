@@ -5,16 +5,16 @@ import { getImageUrl } from "../data/getImageUrl.js";
 export const bookmarkCard = (bookmark, bookmarkListDiv) => {
   const bookmarkCardDiv = document.createElement("div");
   bookmarkCardDiv.classList.add("bookmark-card");
-  //bookmark image
+  // bookmark image
   const imageUrl = getImageUrl(bookmark);
-  console.log(imageUrl);
+
   const bookmarkImage = document.createElement("IMG");
   bookmarkImage.src = imageUrl;
-  //bookmark title
+  // bookmark title
   const bookmarkCardTitle = document.createElement("h3");
   bookmarkCardTitle.classList.add("bookmark-card-title");
   bookmarkCardTitle.innerText = bookmark.title;
-  //book mark button
+  // book mark button
   const removeBookmarkButton = document.createElement("button");
   removeBookmarkButton.classList.add("remove-bookmark");
   removeBookmarkButton.innerText = "Remove";
@@ -22,7 +22,7 @@ export const bookmarkCard = (bookmark, bookmarkListDiv) => {
     removeBookmark(bookmark.id);
     bookmarkView();
   });
-  //line
+  // line
   const line = document.createElement("hr");
   line.classList.add("bookmark-line");
   bookmarkCardDiv.append(
