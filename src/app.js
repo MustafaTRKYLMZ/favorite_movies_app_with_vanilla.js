@@ -1,13 +1,9 @@
-'use strict';
+"use strict";
 
-//import { createBookmark } from './pages/createBookmark.js';
-import { welcomePage } from './pages/welcomePage.js';
+import { welcomePage } from "./pages/welcomePage.js";
 
-const loadApp =()=>{
- welcomePage()
- //let event = new Event('click')
-// createBookmark(event)
-}
+const loadApp = () => {
+  welcomePage();
+};
 
-
-window.addEventListener('load',loadApp)
+window.addEventListener("load", loadApp);
