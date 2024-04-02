@@ -1,12 +1,14 @@
 import { getImageUrl } from "../data/index.js";
 import { createBookmark, movieDetail } from "../pages/index.js";
 
-export const movieCard = (movie) => {
-  const movieList = document.querySelector(".movie-list");
-  //image
-  const imageUrl = getImageUrl(movie);
+export const movieCard = async (movie, movieList, categories) => {
+  //const categories = await getCategoriesByMovies(movie);
+  //image url
+  const imageUrl = getImageUrl(movie["poster_path"]);
+  //movie card
   const movieCardDiv = document.createElement("div");
   movieCardDiv.classList.add("movie-card");
+  //movie image
   const image = document.createElement("IMG");
   movieCardDiv.append(image);
   image.src = imageUrl;
@@ -22,27 +24,31 @@ export const movieCard = (movie) => {
   movieTitleH3.classList.add("movie-title");
   movieTitleH3.append(movie.title);
   movieContentLeft.append(movieTitleH3);
-  //TODO Add category
   // movie category
+  const genresDiv = document.createElement("div");
+  genresDiv.classList.add("genres");
+  categories.forEach((category) => {
+    const categoryP = document.createElement("p");
+    categoryP.append(category.name);
+    genresDiv.append(categoryP);
+  });
+
   const categoryP = document.createElement("p");
   categoryP.append("category");
   // movie release date
   const releaseDateP = document.createElement("p");
   releaseDateP.append(movie.release_date);
-  movieContentLeft.append(categoryP);
+  movieContentLeft.append(genresDiv);
   movieContentLeft.append(releaseDateP);
   //button group
   const buttonGroupDiv = document.createElement("div");
   buttonGroupDiv.classList.add("button-group");
-  // buy link
-  const linkA = document.createElement("a");
-  linkA.setAttribute("href", "#");
-  linkA.append("Buy");
-  linkA.setAttribute("href", "https://www.moviemeter.nl/film/1153939");
+
   // bookmark
   const bookmarkIcon = document.createElement("i");
   bookmarkIcon.addEventListener("click", createBookmark);
-  bookmarkIcon.setAttribute("id", movie.id);
+  bookmarkIcon.value = movie.id;
+  bookmarkIcon.setAttribute("id", "bookmark-button");
   bookmarkIcon.classList.add("material-icons");
   bookmarkIcon.append("bookmark");
 
@@ -50,7 +56,9 @@ export const movieCard = (movie) => {
   detailIcon.classList.add("material-icons");
   detailIcon.addEventListener("click", movieDetail);
   detailIcon.append("more");
-  buttonGroupDiv.append(linkA, bookmarkIcon, detailIcon);
+  detailIcon.value = movie.id;
+  bookmarkIcon.setAttribute("id", "detail-button");
+  buttonGroupDiv.append(bookmarkIcon, detailIcon);
 
   //movie popularity
   const popularityDiv = document.createElement("div");

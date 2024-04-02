@@ -1,9 +1,6 @@
 import { bookmarkCard } from "./bookmarkCard.js";
 
-export const bookmarkView = () => {
-  const bookmarkList = JSON.parse(localStorage.getItem("bookmarkList")) || [];
-  const bookmarkDiv = document.querySelector(".bookmark");
-  bookmarkDiv.innerHTML = "";
+export const bookmarkView = (bookmarkList, bookmarkDiv) => {
   //bookmark title
   const bookmarkTitle = document.createElement("h2");
   bookmarkTitle.classList.add("bookmark-title");

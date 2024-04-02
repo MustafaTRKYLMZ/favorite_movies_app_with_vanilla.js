@@ -2,7 +2,7 @@
 
 import { welcomePage } from "./pages/welcomePage.js";
 
-const loadApp = () => {
+const loadApp = async () => {
   welcomePage();
 };
 

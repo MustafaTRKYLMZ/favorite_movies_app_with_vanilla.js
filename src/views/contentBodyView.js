@@ -13,6 +13,15 @@ export const contentBodyView = () => {
   const bookmarkDiv = document.createElement("div");
   bookmarkDiv.classList.add("bookmark");
 
+  //footer
+  const footerDiv = document.createElement("div");
+  footerDiv.classList.add("footer");
+  const footerText = document.createElement("p");
+  footerText.innerHTML = `<p>2024 <a href="https://github.com/MustafaTRKYLMZ">Mustafa T</a>. All rights reserved.</p>`;
+  footerDiv.append(footerText);
+
   contentBodyDiv.append(leftSidebarDiv, movieListDiv, bookmarkDiv);
+
   document.body.append(contentBodyDiv);
+  document.body.append(footerDiv);
 };

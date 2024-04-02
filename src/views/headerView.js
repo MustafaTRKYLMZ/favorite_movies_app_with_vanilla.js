@@ -1,3 +1,4 @@
+import { mobilHeaderView } from "./mobilHeaderView.js";
 export const headerView = () => {
   const headerDiv = document.createElement("header");
   //header title
@@ -5,4 +6,5 @@ export const headerView = () => {
   h1.append("Favorites Movies");
   headerDiv.append(h1);
   document.body.append(headerDiv);
+  mobilHeaderView(headerDiv);
 };
