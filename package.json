@@ -7,7 +7,14 @@
   "license": "MIT",
   "scripts": {
     "start": "open index.html",
-     "lint": "run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md,json}\""
+    "lint": "run lint"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0"
   }
 }

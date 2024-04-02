@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
-import { welcomePage } from './pages/welcomePage.js';
+import { welcomePage } from "./pages/welcomePage.js";
 
-const loadApp =()=>{
- welcomePage()
-}
+const loadApp = async () => {
+  welcomePage();
+};
 
-window.addEventListener('load',loadApp)
+window.addEventListener("load", loadApp);

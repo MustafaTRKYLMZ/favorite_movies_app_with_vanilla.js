@@ -23,6 +23,24 @@ Here is the coding structure.
 
 (nice to have) create watched movie list.
  According to this list, begining of app, we can filter this films or we can show with different style. 
+### Road map
+TODO
+getMoviesByCategory()
+createBookmark()
+movieDetail() //readMore
+
+1-
+headerview
+leftsidebar
+    button, 
+right sidebar
+bookmark side
+
+2-
+left sidebar click
+read more, back
+bookmark click
+
 
 ## Project structure
 
@@ -80,7 +98,6 @@ views
     movieDetailPageView.js
 
     footerView.js
-
 
 data
     getMovies.js
