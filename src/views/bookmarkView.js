@@ -1,7 +1,7 @@
 import { bookmarkCard } from "./bookmarkCard.js";
 
 export const bookmarkView = (bookmarkList, bookmarkDiv) => {
-  //bookmark title
+  // bookmark title
   const bookmarkTitle = document.createElement("h2");
   bookmarkTitle.classList.add("bookmark-title");
   bookmarkTitle.innerText = "Bookmarks";

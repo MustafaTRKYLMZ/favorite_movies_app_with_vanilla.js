@@ -5,7 +5,7 @@ export const bookmarkCard = (bookmark, bookmarkListDiv) => {
   const bookmarkCardDiv = document.createElement("div");
   bookmarkCardDiv.classList.add("bookmark-card");
   // bookmark image
-  const imageUrl = getImageUrl(bookmark["poster_path"]);
+  const imageUrl = getImageUrl(bookmark.poster_path);
 
   const bookmarkImage = document.createElement("IMG");
   bookmarkImage.src = imageUrl;
@@ -13,7 +13,7 @@ export const bookmarkCard = (bookmark, bookmarkListDiv) => {
   const bookmarkCardTitle = document.createElement("h3");
   bookmarkCardTitle.classList.add("bookmark-card-title");
   bookmarkCardTitle.innerText = bookmark.title;
-  //button group
+  // button group
   const buttonGroupDiv = document.createElement("div");
   buttonGroupDiv.classList.add("button-group");
   const detailIcon = document.createElement("i");

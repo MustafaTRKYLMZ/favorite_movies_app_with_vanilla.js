@@ -1,32 +1,27 @@
 "use-strict";
+
 import { movieCard } from "./movieCard.js";
 import { fetchData } from "../data/fetchData.js";
+import { setResult } from "../pages/setResult.js";
 
 export const movieListView = (movies) => {
-  //movie list
+  // movie list
   const movieList = document.querySelector(".movie-list");
   movieList.innerHTML = "";
 
   movies?.forEach(async (movie) => {
-    let genresArray = [];
-    movie.genre_ids.map((genre) => {
-      if (!genresArray.includes(genre)) {
-        return genresArray.push(genre);
-      }
-    });
-    const response = await fetchData(
-      "https://api.themoviedb.org/3/genre/movie/list"
-    );
-    let categories;
-    if (response) {
-      categories = response.genres.filter((category) => {
-        return genresArray.includes(category.id);
-      });
-    } else {
-      throw new Error(
-        `HTTP network error ${response.status} ${response.statusText}`
+    const genreSet = new Set();
+    movie.genre_ids.forEach((genre_id) => genreSet.add(genre_id));
+
+    try {
+      const response = await fetchData(
+        "https://api.themoviedb.org/3/genre/movie/list",
       );
+      const categories = response.genres.filter((genre) => (genre.id = genreSet.has(genre.id)));
+      movieCard(movie, movieList, categories);
+    } catch (error) {
+      setResult(".error", `HTTP network error ${error.message}`);
+      throw new Error("HTTP network error");
     }
-    movieCard(movie, movieList, categories);
   });
 };

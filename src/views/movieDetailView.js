@@ -41,7 +41,7 @@ export const movieDetailView = async (movie) => {
   const movieContentDiv = document.createElement("div");
   movieContentDiv.classList.add("movie-detail");
 
-  //poster image
+  // poster image
   const posterImage = document.createElement("img");
   posterImage.classList.add("poster-image");
   posterImage.setAttribute("src", getImageUrl(poster_path));
@@ -58,7 +58,7 @@ export const movieDetailView = async (movie) => {
   movieTitle.append(title);
   movieDetailDiv.append(movieTitle);
 
-  //movie category
+  // movie category
   const genresDiv = document.createElement("div");
   genresDiv.classList.add("genres");
   const moiveCategory = await getCategoriesByMovies(movie);
@@ -86,10 +86,10 @@ export const movieDetailView = async (movie) => {
   movieDetailDiv.append(originalLanguage, voteAverage, releaseDate);
   movieContentRightside.append(movieDetailDiv);
 
-  //movie popularity
+  // movie popularity
   const popularityDiv = document.createElement("div");
   popularityDiv.classList.add("popularity");
-  //star icon
+  // star icon
   const starIcon = document.createElement("i");
   starIcon.append("star");
   starIcon.classList.add("material-icons");
@@ -97,7 +97,7 @@ export const movieDetailView = async (movie) => {
   const popularityP = document.createElement("p");
   popularityP.append(popularity);
   popularityDiv.append(starIcon, popularityP);
-  //movie content top
+  // movie content top
   const movieContentTop = document.createElement("div");
   movieContentTop.classList.add("movie-detail-top");
   movieContentRightside.append(popularityDiv);

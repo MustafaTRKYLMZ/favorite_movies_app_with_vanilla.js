@@ -2,24 +2,24 @@ import { getImageUrl } from "../data/index.js";
 import { createBookmark, movieDetail } from "../pages/index.js";
 
 export const movieCard = async (movie, movieList, categories) => {
-  //const categories = await getCategoriesByMovies(movie);
-  //image url
-  const imageUrl = getImageUrl(movie["poster_path"]);
-  //movie card
+  // const categories = await getCategoriesByMovies(movie);
+  // image url
+  const imageUrl = getImageUrl(movie.poster_path);
+  // movie card
   const movieCardDiv = document.createElement("div");
   movieCardDiv.classList.add("movie-card");
-  //movie image
+  // movie image
   const image = document.createElement("IMG");
   movieCardDiv.append(image);
   image.src = imageUrl;
   image.setAttribute("alt", "Movie poster is not visible");
   movieCardDiv.append(image);
-  //movie card content
+  // movie card content
   const movieContentLeft = document.createElement("div");
   movieContentLeft.classList.add("movie-content-left");
   const movieRightDiv = document.createElement("div");
   movieRightDiv.classList.add("movie-right");
-  //movie header
+  // movie header
   const movieTitleH3 = document.createElement("h3");
   movieTitleH3.classList.add("movie-title");
   movieTitleH3.append(movie.title);
@@ -40,7 +40,7 @@ export const movieCard = async (movie, movieList, categories) => {
   releaseDateP.append(movie.release_date);
   movieContentLeft.append(genresDiv);
   movieContentLeft.append(releaseDateP);
-  //button group
+  // button group
   const buttonGroupDiv = document.createElement("div");
   buttonGroupDiv.classList.add("button-group");
 
@@ -60,7 +60,7 @@ export const movieCard = async (movie, movieList, categories) => {
   bookmarkIcon.setAttribute("id", "detail-button");
   buttonGroupDiv.append(bookmarkIcon, detailIcon);
 
-  //movie popularity
+  // movie popularity
   const popularityDiv = document.createElement("div");
   popularityDiv.classList.add("popularity");
   const starIcon = document.createElement("i");
@@ -70,17 +70,12 @@ export const movieCard = async (movie, movieList, categories) => {
   const popularityP = document.createElement("p");
   popularityP.append(movie.popularity);
   popularityDiv.append(starIcon, popularityP);
-  //line
-  const lineDiv = document.createElement("div");
-  lineDiv.classList.add("line");
-  //append parent
+  // append parent
   const movieContentDiv = document.createElement("div");
   movieContentDiv.classList.add("movie-content");
   movieContentDiv.append(movieContentLeft, popularityDiv);
   movieRightDiv.append(movieContentDiv);
   movieRightDiv.append(buttonGroupDiv);
   movieCardDiv.append(movieRightDiv);
-
   movieList.append(movieCardDiv);
-  movieList.append(lineDiv);
 };

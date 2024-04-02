@@ -1,11 +1,7 @@
 export const getGenres = (movies) => {
-  let genresArray = [];
-  movies?.map((movie) => {
-    return movie?.genre_ids.map((genre) => {
-      if (!genresArray.includes(genre)) {
-        genresArray.push(genre);
-      }
-    });
+  const genreSet = new Set();
+  movies?.forEach((movie) => {
+    movie.genre_ids.forEach((genre_id) => genreSet.add(genre_id));
   });
-  return genresArray;
+  return [...genreSet];
 };

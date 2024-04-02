@@ -1,7 +1,5 @@
-"use strict";
+import { setResult } from "../pages/setResult.js";
 import { accessToken, apiKey } from "./key.js";
-
-//const apiUrl = `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}`;
 
 export const fetchData = async (apiUrl) => {
   const response = await fetch(`${apiUrl}?api_key=${apiKey}`, {
@@ -14,5 +12,9 @@ export const fetchData = async (apiUrl) => {
   if (response.ok) {
     return response.json();
   }
+  setResult(
+    ".error",
+    `HTTP network error ${response.status} ${response.statusText}`,
+  );
   throw new Error(`HTTP Error ${response.status}:  ${response.statusText}`);
 };
