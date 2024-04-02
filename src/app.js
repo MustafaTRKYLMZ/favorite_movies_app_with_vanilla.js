@@ -1,3 +1,7 @@
-window.addEventListener('load',()=>{
-    console.log("Hello every one")
-})
+import { welcomePage } from "./pages/welcomePage.js";
+
+const loadApp = async () => {
+  welcomePage();
+};
+
+window.addEventListener("load", loadApp);

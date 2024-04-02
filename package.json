@@ -4,5 +4,17 @@
   "main": "index.html",
   "repository": "https://github.com/MustafaTRKYLMZ/my_favorite_movies_web_app_with_vanilla.js.git",
   "author": "MustafaTRKYLMZ <cana66331@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "open index.html",
+    "lint": "run lint"
+  },
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-plugin-react": "^7.34.1"
+  },
+  "dependencies": {
+    "eslint-plugin-jsx-a11y": "^6.8.0"
+  }
 }
