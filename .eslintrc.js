@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: "eslint:recommended",
+  extends: "airbnb",
   overrides: [
     {
       env: {
@@ -22,5 +22,8 @@ module.exports = {
       jsx: true,
     },
   },
-  rules: {},
+  rules: {
+    quotes: ["error", "double"],
+    "import/extensions": "off",
+  },
 };

@@ -1,9 +1,8 @@
-"use strict";
-
 import { refreshMovies } from "../data/index.js";
 import { headerView, contentBodyView, movieListView } from "../views/index.js";
 import { leftSidebar } from "./leftSidebar.js";
 import { bookmark } from "./bookmark.js";
+import { setResult } from "./setResult.js";
 
 export const welcomePage = async () => {
   const localMovies = JSON.parse(localStorage.getItem("moviesList"));
@@ -12,20 +11,16 @@ export const welcomePage = async () => {
   contentBodyView();
 
   if (!localMovies) {
-    const newMovies = await refreshMovies();
-    //TODO send here categories
-    leftSidebar(newMovies);
-    movieListView(newMovies);
-    //TODO view movies to movie list
-  } else {
-    // TODO //TODO view movies to movie list
-    //TODO send here cagetorys
-    leftSidebar(localMovies);
-    movieListView(localMovies);
+    try {
+      const newMovies = await refreshMovies();
+      leftSidebar(newMovies);
+      movieListView(newMovies);
+    } catch (error) {
+      setResult(".error", error.message);
+      throw new Error(error);
+    }
   }
+  leftSidebar(localMovies);
+  movieListView(localMovies);
   bookmark();
-
-  // createBookmark()
-  //TODO get category list and set them to left side bar
-  //TODO get bookmarked list and set them to right side bar
 };

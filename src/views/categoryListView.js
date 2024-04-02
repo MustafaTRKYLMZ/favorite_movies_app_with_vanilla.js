@@ -4,7 +4,7 @@ import { getMoviesByCategory } from "../pages/index.js";
 export const categoryListView = (categorys, mobilSidebarContentDiv) => {
   const categoryListDiv = document.createElement("div");
   categoryListDiv.classList.add("category-list");
-  //category list
+  // category list
   categoryListDiv.innerHTML = "";
   const localMovies = JSON.parse(localStorage.getItem("moviesList"));
 

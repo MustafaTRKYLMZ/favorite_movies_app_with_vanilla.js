@@ -1,5 +1,3 @@
-"use strict";
-
 import { welcomePage } from "./pages/welcomePage.js";
 
 const loadApp = async () => {

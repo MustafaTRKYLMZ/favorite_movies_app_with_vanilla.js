@@ -1,6 +1,15 @@
 import { leftSidebarView } from "../views/index.js";
 import { getCategoriesByMovies } from "../data/index.js";
+import { setResult } from "./setResult.js";
+
 export const leftSidebar = async (movies) => {
-  const categories = await getCategoriesByMovies(movies);
-  leftSidebarView(categories);
+  let categories = [];
+  try {
+    categories = await getCategoriesByMovies(movies);
+    leftSidebarView(categories);
+  } catch (error) {
+    console.log("error >>>>", error);
+    setResult(".error", error.message);
+    throw new Error(error);
+  }
 };

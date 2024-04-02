@@ -5,3 +5,4 @@ export * from "./movieDetail.js";
 export * from "./getMoviesByCategory.js";
 export * from "./removeBookmark.js";
 export * from "./bookmark.js";
+export * from "./setResult.js";
