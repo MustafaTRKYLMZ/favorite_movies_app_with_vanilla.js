@@ -10,10 +10,13 @@
     "lint": "run lint"
   },
   "devDependencies": {
-    "eslint": "^8.2.0",
-    "eslint-config-airbnb": "19.0.4"
+    "eslint": "8.2.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-react": "7.28.0",
+    "eslint-plugin-react-hooks": "4.3.0"
   },
   "dependencies": {
-    "eslint-plugin-jsx-a11y": "^6.8.0"
+    "eslint-plugin-jsx-a11y": "6.5.1"
   }
 }

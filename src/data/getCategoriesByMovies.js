@@ -1,4 +1,4 @@
-import { setResult } from "../pages/setResult.js";
+import { setResult } from "../views/setResult.js";
 import { fetchData } from "./fetchData.js";
 import { getGenres } from "./getGenres.js";
 

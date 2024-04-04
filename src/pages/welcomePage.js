@@ -1,8 +1,10 @@
 import { refreshMovies } from "../data/index.js";
-import { headerView, contentBodyView, movieListView } from "../views/index.js";
-import { leftSidebar } from "./leftSidebar.js";
-import { bookmark } from "./bookmark.js";
-import { setResult } from "./setResult.js";
+import { headerView } from "../views/headerView.js";
+import { contentBodyView } from "../views/contentBodyView.js";
+import { movieListView } from "../views/movieListView.js";
+import { leftSidebar } from "../views/leftSidebar.js";
+import { bookmark } from "../views/bookmark.js";
+import { setResult } from "../views/setResult.js";
 
 export const welcomePage = async () => {
   const localMovies = JSON.parse(localStorage.getItem("moviesList"));

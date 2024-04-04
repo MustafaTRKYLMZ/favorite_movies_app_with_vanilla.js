@@ -1,5 +1,6 @@
 import { getImageUrl } from "../data/index.js";
-import { createBookmark, movieDetail } from "../pages/index.js";
+import { createBookmark } from "./createBookmark.js";
+import { movieDetail } from "./movieDetail.js";
 
 export const movieCard = async (movie, movieList, categories) => {
   // const categories = await getCategoriesByMovies(movie);

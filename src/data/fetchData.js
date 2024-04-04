@@ -1,4 +1,4 @@
-import { setResult } from "../pages/setResult.js";
+import { setResult } from "../views/setResult.js";
 import { accessToken, apiKey } from "./key.js";
 
 export const fetchData = async (apiUrl) => {

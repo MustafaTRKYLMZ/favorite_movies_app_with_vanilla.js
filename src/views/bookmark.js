@@ -1,4 +1,4 @@
-import { bookmarkView } from "../views/index.js";
+import bookmarkView from "./bookmarkView.js";
 
 export const bookmark = async () => {
   const bookmarkList = JSON.parse(localStorage.getItem("bookmarkList")) || [];

@@ -1,5 +1,3 @@
-"use-strict";
-
 export const contentBodyView = () => {
   const contentBodyDiv = document.createElement("div");
   contentBodyDiv.classList.add("content-body");
@@ -17,7 +15,8 @@ export const contentBodyView = () => {
   const footerDiv = document.createElement("div");
   footerDiv.classList.add("footer");
   const footerText = document.createElement("p");
-  footerText.innerHTML = "<p>2024 <a href=\"https://github.com/MustafaTRKYLMZ\">Mustafa T</a>. All rights reserved.</p>";
+  footerText.innerHTML =
+    '<p>2024 <a href="https://github.com/MustafaTRKYLMZ">Mustafa T</a>. All rights reserved.</p>';
   footerDiv.append(footerText);
 
   contentBodyDiv.append(leftSidebarDiv, movieListDiv, bookmarkDiv);

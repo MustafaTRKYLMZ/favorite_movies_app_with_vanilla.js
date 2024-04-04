@@ -1,7 +1,7 @@
-import { removeBookmark, movieDetail } from "../pages/index.js";
+import { movieDetail } from "./movieDetail.js";
 import { getImageUrl } from "../data/getImageUrl.js";
 
-export const bookmarkCard = (bookmark, bookmarkListDiv) => {
+export const bookmarkCard = (bookmark, bookmarkListDiv, onRemoveBookmark) => {
   const bookmarkCardDiv = document.createElement("div");
   bookmarkCardDiv.classList.add("bookmark-card");
   // bookmark image
@@ -28,7 +28,7 @@ export const bookmarkCard = (bookmark, bookmarkListDiv) => {
   removeBookmarkButton.classList.add("remove-bookmark");
   removeBookmarkButton.innerText = "delete";
   removeBookmarkButton.addEventListener("click", () => {
-    removeBookmark(bookmark.id);
+    onRemoveBookmark(bookmark.id);
   });
   buttonGroupDiv.append(detailIcon, removeBookmarkButton);
   // line

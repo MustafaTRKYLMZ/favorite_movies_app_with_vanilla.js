@@ -1,4 +1,4 @@
-import { leftSidebarView } from "../views/index.js";
+import { leftSidebarView } from "./leftSidebarView.js";
 import { getCategoriesByMovies } from "../data/index.js";
 import { setResult } from "./setResult.js";
 
