@@ -7,9 +7,10 @@ export const getCategoriesByMovies = async (movies) => {
   if (movies) {
     genres = getGenres(movies);
   }
+  //fetch category
   try {
     const response = await fetchData(
-      "https://api.themoviedb.org/3/genre/movie/list",
+      "https://api.themoviedb.org/3/genre/movie/list"
     );
 
     return response.genres.filter((genre) => genres.includes(genre.id));
