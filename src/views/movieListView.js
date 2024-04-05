@@ -16,7 +16,7 @@ export const movieListView = (movies) => {
         "https://api.themoviedb.org/3/genre/movie/list"
       );
       const categories = response.genres.filter(
-        (genre) => (genre.id = genreSet.has(genre.id))
+        (genre) => genre.id === genreSet.has(genre.id)
       );
       movieCard(movie, movieList, categories);
     } catch (error) {

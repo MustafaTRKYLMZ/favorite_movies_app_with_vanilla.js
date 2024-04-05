@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: "airbnb",
+  extends: ["airbnb/base", "prettier"],
   overrides: [
     {
       env: {
@@ -23,8 +23,10 @@ module.exports = {
     },
   },
   rules: {
-    quotes: ["error", "double"],
+    quotes: "off",
+    camelcase: "off",
     "import/extensions": "off",
     "import/prefer-default-export": "off",
+    "no-param-reassign": "off",
   },
 };
