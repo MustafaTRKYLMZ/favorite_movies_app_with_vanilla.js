@@ -3,7 +3,6 @@ import { createBookmark } from "./createBookmark.js";
 import { movieDetail } from "./movieDetail.js";
 
 export const movieCard = async (movie, movieList, categories) => {
-  // const categories = await getCategoriesByMovies(movie);
   // image url
   const imageUrl = getImageUrl(movie.poster_path);
   // movie card

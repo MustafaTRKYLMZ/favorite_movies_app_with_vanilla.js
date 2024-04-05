@@ -4,9 +4,10 @@ import { setResult } from "./setResult.js";
 
 export const leftSidebar = async (movies) => {
   try {
-    let categories = await getCategoriesByMovies(movies);
+    const categories = await getCategoriesByMovies(movies);
     leftSidebarView(categories);
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.log("error >>>>", error);
     setResult(".error", error.message);
     throw new Error(error);

@@ -3,11 +3,10 @@ import { setResult } from "./setResult.js";
 
 export const createBookmark = (event) => {
   const movies = JSON.parse(localStorage.getItem("moviesList")) || [];
-  const selectedMovie = movies.filter((movie) => {
-    if (Number(movie.id) === Number(event.target.value)) {
-      return movie;
-    }
-  });
+  const selectedMovie = movies.filter(
+    (movie) => Number(movie.id) === Number(event.target.value)
+  );
+  console.log("selectedMovie", selectedMovie);
   const bookmarkList = JSON.parse(localStorage.getItem("bookmarkList")) || [];
   const newBookmarkList = [...bookmarkList, ...selectedMovie];
   const bookmarkDiv = document.querySelector(".bookmark");
@@ -15,6 +14,7 @@ export const createBookmark = (event) => {
 
   if (selectedMovie.length > 0) {
     const isBookmarked = bookmarkList.find(
+      // eslint-disable-next-line comma-dangle
       (movie) => movie.id === selectedMovie[0].id
     );
 
@@ -25,7 +25,7 @@ export const createBookmark = (event) => {
     }
     setResult(".info", `${selectedMovie[0].title} is bookmarked`);
     bookmarkDiv.innerHTML = "";
-    localStorage.setItem("bookmarkList", JSON.stringify(b));
+    localStorage.setItem("bookmarkList", JSON.stringify(newBookmarkList));
     bookmarkView(newBookmarkList, bookmarkDiv);
     // mobil bookmark list
     mobilSidebarContent.innerHTML = "";
