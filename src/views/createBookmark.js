@@ -6,7 +6,6 @@ export const createBookmark = (event) => {
   const selectedMovie = movies.filter(
     (movie) => Number(movie.id) === Number(event.target.value)
   );
-  console.log("selectedMovie", selectedMovie);
   const bookmarkList = JSON.parse(localStorage.getItem("bookmarkList")) || [];
   const newBookmarkList = [...bookmarkList, ...selectedMovie];
   const bookmarkDiv = document.querySelector(".bookmark");

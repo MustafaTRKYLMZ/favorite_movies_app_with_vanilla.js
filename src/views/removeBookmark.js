@@ -5,7 +5,7 @@ export const removeBookmark = (id) => {
   bookmarkDiv.innerHTML = "";
   const bookmarkList = JSON.parse(localStorage.getItem("bookmarkList")) || [];
   const newBookmarkList = bookmarkList.filter(
-    (bookmarkItem) => parseInt(bookmarkItem.id) !== parseInt(id)
+    (bookmarkItem) => parseInt(bookmarkItem.id, 10) !== parseInt(id, 10)
   );
   setResult(".info", "Bookmark removed");
   localStorage.setItem("bookmarkList", JSON.stringify(newBookmarkList));

@@ -1,0 +1,462 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>My Favorite Movies Web App With Vanilla.js</title>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body data-new-gr-c-s-check-loaded="14.1061.0" data-gr-ext-installed="">
+      <script type="module" src="src/app.js"></script>
+      <header>
+         <h1>Favorites Movies</h1>
+         <div class="header-button-group">
+            <div class="search-input"><input type="text" placeholder="Search..."></div>
+            <div class="mobil-header-menu"><i class="material-icons">menu</i></div>
+         </div>
+      </header>
+      <div class="error" style="display: none;"></div>
+      <div class="info" style="display: none;"></div>
+      <div class="content-body">
+         <div class="left-sidebar">
+            <div class="category-list">
+               <div class="category-list"><button>All Movies</button><button id="28">Action</button><button id="12">Adventure</button><button id="16">Animation</button><button id="35">Comedy</button><button id="80">Crime</button><button id="18">Drama</button><button id="10751">Family</button><button id="14">Fantasy</button><button id="36">History</button><button id="27">Horror</button><button id="10749">Romance</button><button id="878">Science Fiction</button><button id="53">Thriller</button><button id="10752">War</button></div>
+            </div>
+         </div>
+         <div class="movie-list">
+            <div class="movie-card">
+               <img src="https://image.tmdb.org/t/p/w400/gmGK5Gw5CIGMPhOmTO0bNA9Q66c.jpg023355b94bf23acecb09880fb168a0d4" alt="Movie poster is not visible">
+               <div class="movie-right">
+                  <div class="movie-content">
+                     <div class="movie-content-left">
+                        <h3 class="movie-title">Godzilla x Kong: The New Empire</h3>
+                        <div class="genres">
+                           <p>Action</p>
+                           <p>Adventure</p>
+                           <p>Science Fiction</p>
+                        </div>
+                        <p>2024-03-27</p>
+                     </div>
+                     <div class="popularity">
+                        <i class="material-icons">star</i>
+                        <p>5072.084</p>
+                     </div>
+                  </div>
+                  <div class="button-group"><i id="detail-button" class="material-icons">bookmark</i><i class="material-icons">more</i></div>
+               </div>
+            </div>
+            <div class="movie-card">
+               <img src="https://image.tmdb.org/t/p/w400/7IJ7F8tX7IAkpUdaGovOBJqORnJ.jpg023355b94bf23acecb09880fb168a0d4" alt="Movie poster is not visible">
+               <div class="movie-right">
+                  <div class="movie-content">
+                     <div class="movie-content-left">
+                        <h3 class="movie-title">The Pig, the Snake and the Pigeon</h3>
+                        <div class="genres">
+                           <p>Action</p>
+                           <p>Crime</p>
+                        </div>
+                        <p>2023-10-06</p>
+                     </div>
+                     <div class="popularity">
+                        <i class="material-icons">star</i>
+                        <p>615.858</p>
+                     </div>
+                  </div>
+                  <div class="button-group"><i id="detail-button" class="material-icons">bookmark</i><i class="material-icons">more</i></div>
+               </div>
+            </div>
+            <div class="movie-card">
+               <img src="https://image.tmdb.org/t/p/w400/r65fWcFELCSeyyrkq5wY09EPSGN.jpg023355b94bf23acecb09880fb168a0d4" alt="Movie poster is not visible">
+               <div class="movie-right">
+                  <div class="movie-content">
+                     <div class="movie-content-left">
+                        <h3 class="movie-title">Ghostbusters: Frozen Empire</h3>
+                        <div class="genres">
+                           <p>Adventure</p>
+                           <p>Comedy</p>
+                           <p>Fantasy</p>
+                        </div>
+                        <p>2024-03-20</p>
+                     </div>
+                     <div class="popularity">
+                        <i class="material-icons">star</i>
+                        <p>433.74</p>
+                     </div>
+                  </div>
+                  <div class="button-group"><i id="detail-button" class="material-icons">bookmark</i><i class="material-icons">more</i></div>
+               </div>
+            </div>
+            <div class="movie-card">
+               <img src="https://image.tmdb.org/t/p/w400/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg023355b94bf23acecb09880fb168a0d4" alt="Movie poster is not visible">
+               <div class="movie-right">
+                  <div class="movie-content">
+                     <div class="movie-content-left">
+                        <h3 class="movie-title">Road House</h3>
+                        <div class="genres">
+                           <p>Action</p>
+                           <p>Thriller</p>
+                        </div>
+                        <p>2024-03-08</p>
+                     </div>
+                     <div class="popularity">
+                        <i class="material-icons">star</i>
+                        <p>3111.068</p>
+                     </div>
+                  </div>
+                  <div class="button-group"><i id="detail-button" class="material-icons">bookmark</i><i class="material-icons">more</i></div>
+               </div>
+            </div>
+            <div class="movie-card">
+               <img src="https://image.tmdb.org/t/p/w400/5qHoazZiaLe7oFBok7XlUhg96f2.jpg023355b94bf23acecb09880fb168a0d4" alt="Movie poster is not visible">
+               <div class="movie-right">
+                  <div class="movie-content">
+                     <div class="movie-content-left">
+                        <h3 class="movie-title">Anyone But You</h3>
+                        <div class="genres">
+                           <p>Comedy</p>
+                           <p>Romance</p>
+                        </div>
+                        <p>2023-12-21</p>
+                     </div>
+                     <div class="popularity">
+                        <i class="material-icons">star</i>
+                        <p>545.91</p>
+                     </div>
+                  </div>
+                  <div class="button-group"><i id="detail-button" class="material-icons">bookmark</i><i class="material-icons">more</i></div>
+               </div>
+            </div>
+            <div class="movie-card">
+               <img src="https://image.tmdb.org/t/p/w400/hu40Uxp9WtpL34jv3zyWLb5zEVY.jpg023355b94bf23acecb09880fb168a0d4" alt="Movie poster is not visible">
+               <div class="movie-right">
+                  <div class="movie-content">
+                     <div class="movie-content-left">
+                        <h3 class="movie-title">No Way Up</h3>
+                        <div class="genres">
+                           <p>Action</p>
+                           <p>Horror</p>
+                           <p>Thriller</p>
+                        </div>
+                        <p>2024-01-18</p>
+                     </div>
+                     <div class="popularity">
+                        <i class="material-icons">star</i>
+                        <p>975.693</p>
+                     </div>
+                  </div>
+                  <div class="button-group"><i id="detail-button" class="material-icons">bookmark</i><i class="material-icons">more</i></div>
+               </div>
+            </div>
+            <div class="movie-card">
+               <img src="https://image.tmdb.org/t/p/w400/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg023355b94bf23acecb09880fb168a0d4" alt="Movie poster is not visible">
+               <div class="movie-right">
+                  <div class="movie-content">
+                     <div class="movie-content-left">
+                        <h3 class="movie-title">Madame Web</h3>
+                        <div class="genres">
+                           <p>Action</p>
+                           <p>Fantasy</p>
+                        </div>
+                        <p>2024-02-14</p>
+                     </div>
+                     <div class="popularity">
+                        <i class="material-icons">star</i>
+                        <p>1928.87</p>
+                     </div>
+                  </div>
+                  <div class="button-group"><i id="detail-button" class="material-icons">bookmark</i><i class="material-icons">more</i></div>
+               </div>
+            </div>
+            <div class="movie-card">
+               <img src="https://image.tmdb.org/t/p/w400/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg023355b94bf23acecb09880fb168a0d4" alt="Movie poster is not visible">
+               <div class="movie-right">
+                  <div class="movie-content">
+                     <div class="movie-content-left">
+                        <h3 class="movie-title">Kung Fu Panda 4</h3>
+                        <div class="genres">
+                           <p>Action</p>
+                           <p>Adventure</p>
+                           <p>Animation</p>
+                           <p>Comedy</p>
+                           <p>Family</p>
+                        </div>
+                        <p>2024-03-02</p>
+                     </div>
+                     <div class="popularity">
+                        <i class="material-icons">star</i>
+                        <p>3472.8</p>
+                     </div>
+                  </div>
+                  <div class="button-group"><i id="detail-button" class="material-icons">bookmark</i><i class="material-icons">more</i></div>
+               </div>
+            </div>
+            <div class="movie-card">
+               <img src="https://image.tmdb.org/t/p/w400/fko8CPrnspewLXgFUlUkivyvpHX.jpg023355b94bf23acecb09880fb168a0d4" alt="Movie poster is not visible">
+               <div class="movie-right">
+                  <div class="movie-content">
+                     <div class="movie-content-left">
+                        <h3 class="movie-title">Megamind vs. the Doom Syndicate</h3>
+                        <div class="genres">
+                           <p>Animation</p>
+                           <p>Comedy</p>
+                           <p>Science Fiction</p>
+                        </div>
+                        <p>2024-03-29</p>
+                     </div>
+                     <div class="popularity">
+                        <i class="material-icons">star</i>
+                        <p>711.826</p>
+                     </div>
+                  </div>
+                  <div class="button-group"><i id="detail-button" class="material-icons">bookmark</i><i class="material-icons">more</i></div>
+               </div>
+            </div>
+            <div class="movie-card">
+               <img src="https://image.tmdb.org/t/p/w400/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg023355b94bf23acecb09880fb168a0d4" alt="Movie poster is not visible">
+               <div class="movie-right">
+                  <div class="movie-content">
+                     <div class="movie-content-left">
+                        <h3 class="movie-title">Dune: Part Two</h3>
+                        <div class="genres">
+                           <p>Adventure</p>
+                           <p>Science Fiction</p>
+                        </div>
+                        <p>2024-02-27</p>
+                     </div>
+                     <div class="popularity">
+                        <i class="material-icons">star</i>
+                        <p>846.078</p>
+                     </div>
+                  </div>
+                  <div class="button-group"><i id="detail-button" class="material-icons">bookmark</i><i class="material-icons">more</i></div>
+               </div>
+            </div>
+            <div class="movie-card">
+               <img src="https://image.tmdb.org/t/p/w400/vgJZSqKMXWDDx09iSIStGKfHMku.jpg023355b94bf23acecb09880fb168a0d4" alt="Movie poster is not visible">
+               <div class="movie-right">
+                  <div class="movie-content">
+                     <div class="movie-content-left">
+                        <h3 class="movie-title">Wish</h3>
+                        <div class="genres">
+                           <p>Adventure</p>
+                           <p>Animation</p>
+                           <p>Family</p>
+                           <p>Fantasy</p>
+                        </div>
+                        <p>2023-11-13</p>
+                     </div>
+                     <div class="popularity">
+                        <i class="material-icons">star</i>
+                        <p>416.989</p>
+                     </div>
+                  </div>
+                  <div class="button-group"><i id="detail-button" class="material-icons">bookmark</i><i class="material-icons">more</i></div>
+               </div>
+            </div>
+            <div class="movie-card">
+               <img src="https://image.tmdb.org/t/p/w400/siduVKgOnABO4WH4lOwPQwaGwJp.jpg023355b94bf23acecb09880fb168a0d4" alt="Movie poster is not visible">
+               <div class="movie-right">
+                  <div class="movie-content">
+                     <div class="movie-content-left">
+                        <h3 class="movie-title">Argylle</h3>
+                        <div class="genres">
+                           <p>Action</p>
+                           <p>Adventure</p>
+                           <p>Comedy</p>
+                        </div>
+                        <p>2024-01-31</p>
+                     </div>
+                     <div class="popularity">
+                        <i class="material-icons">star</i>
+                        <p>631.19</p>
+                     </div>
+                  </div>
+                  <div class="button-group"><i id="detail-button" class="material-icons">bookmark</i><i class="material-icons">more</i></div>
+               </div>
+            </div>
+            <div class="movie-card">
+               <img src="https://image.tmdb.org/t/p/w400/h3jYanWMEJq6JJsCopy1h7cT2Hs.jpg023355b94bf23acecb09880fb168a0d4" alt="Movie poster is not visible">
+               <div class="movie-right">
+                  <div class="movie-content">
+                     <div class="movie-content-left">
+                        <h3 class="movie-title">Land of Bad</h3>
+                        <div class="genres">
+                           <p>Action</p>
+                           <p>Thriller</p>
+                           <p>War</p>
+                        </div>
+                        <p>2024-01-25</p>
+                     </div>
+                     <div class="popularity">
+                        <i class="material-icons">star</i>
+                        <p>832.65</p>
+                     </div>
+                  </div>
+                  <div class="button-group"><i id="detail-button" class="material-icons">bookmark</i><i class="material-icons">more</i></div>
+               </div>
+            </div>
+            <div class="movie-card">
+               <img src="https://image.tmdb.org/t/p/w400/kCGlIMHnOm8JPXq3rXM6c5wMxcT.jpg023355b94bf23acecb09880fb168a0d4" alt="Movie poster is not visible">
+               <div class="movie-right">
+                  <div class="movie-content">
+                     <div class="movie-content-left">
+                        <h3 class="movie-title">Poor Things</h3>
+                        <div class="genres">
+                           <p>Comedy</p>
+                           <p>Romance</p>
+                           <p>Science Fiction</p>
+                        </div>
+                        <p>2023-12-07</p>
+                     </div>
+                     <div class="popularity">
+                        <i class="material-icons">star</i>
+                        <p>596.341</p>
+                     </div>
+                  </div>
+                  <div class="button-group"><i id="detail-button" class="material-icons">bookmark</i><i class="material-icons">more</i></div>
+               </div>
+            </div>
+            <div class="movie-card">
+               <img src="https://image.tmdb.org/t/p/w400/AgHbB9DCE9aE57zkHjSmseszh6e.jpg023355b94bf23acecb09880fb168a0d4" alt="Movie poster is not visible">
+               <div class="movie-right">
+                  <div class="movie-content">
+                     <div class="movie-content-left">
+                        <h3 class="movie-title">Damsel</h3>
+                        <div class="genres">
+                           <p>Action</p>
+                           <p>Adventure</p>
+                           <p>Fantasy</p>
+                        </div>
+                        <p>2024-03-07</p>
+                     </div>
+                     <div class="popularity">
+                        <i class="material-icons">star</i>
+                        <p>1189.19</p>
+                     </div>
+                  </div>
+                  <div class="button-group"><i id="detail-button" class="material-icons">bookmark</i><i class="material-icons">more</i></div>
+               </div>
+            </div>
+            <div class="movie-card">
+               <img src="https://image.tmdb.org/t/p/w400/v9f9MMrq2nGQrN7cHnQRmEq9lSE.jpg023355b94bf23acecb09880fb168a0d4" alt="Movie poster is not visible">
+               <div class="movie-right">
+                  <div class="movie-content">
+                     <div class="movie-content-left">
+                        <h3 class="movie-title">The Passion of the Christ</h3>
+                        <div class="genres">
+                           <p>Drama</p>
+                        </div>
+                        <p>2004-02-25</p>
+                     </div>
+                     <div class="popularity">
+                        <i class="material-icons">star</i>
+                        <p>706.39</p>
+                     </div>
+                  </div>
+                  <div class="button-group"><i id="detail-button" class="material-icons">bookmark</i><i class="material-icons">more</i></div>
+               </div>
+            </div>
+            <div class="movie-card">
+               <img src="https://image.tmdb.org/t/p/w400/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg023355b94bf23acecb09880fb168a0d4" alt="Movie poster is not visible">
+               <div class="movie-right">
+                  <div class="movie-content">
+                     <div class="movie-content-left">
+                        <h3 class="movie-title">Oppenheimer</h3>
+                        <div class="genres">
+                           <p>Drama</p>
+                           <p>History</p>
+                        </div>
+                        <p>2023-07-19</p>
+                     </div>
+                     <div class="popularity">
+                        <i class="material-icons">star</i>
+                        <p>638.964</p>
+                     </div>
+                  </div>
+                  <div class="button-group"><i id="detail-button" class="material-icons">bookmark</i><i class="material-icons">more</i></div>
+               </div>
+            </div>
+            <div class="movie-card">
+               <img src="https://image.tmdb.org/t/p/w400/d5NXSklXo0qyIYkgV94XAgMIckC.jpg023355b94bf23acecb09880fb168a0d4" alt="Movie poster is not visible">
+               <div class="movie-right">
+                  <div class="movie-content">
+                     <div class="movie-content-left">
+                        <h3 class="movie-title">Dune</h3>
+                        <div class="genres">
+                           <p>Adventure</p>
+                           <p>Science Fiction</p>
+                        </div>
+                        <p>2021-09-15</p>
+                     </div>
+                     <div class="popularity">
+                        <i class="material-icons">star</i>
+                        <p>471.296</p>
+                     </div>
+                  </div>
+                  <div class="button-group"><i id="detail-button" class="material-icons">bookmark</i><i class="material-icons">more</i></div>
+               </div>
+            </div>
+            <div class="movie-card">
+               <img src="https://image.tmdb.org/t/p/w400/ldfCF9RhR40mppkzmftxapaHeTo.jpg023355b94bf23acecb09880fb168a0d4" alt="Movie poster is not visible">
+               <div class="movie-right">
+                  <div class="movie-content">
+                     <div class="movie-content-left">
+                        <h3 class="movie-title">Migration</h3>
+                        <div class="genres">
+                           <p>Action</p>
+                           <p>Adventure</p>
+                           <p>Animation</p>
+                           <p>Comedy</p>
+                           <p>Family</p>
+                        </div>
+                        <p>2023-12-06</p>
+                     </div>
+                     <div class="popularity">
+                        <i class="material-icons">star</i>
+                        <p>990.599</p>
+                     </div>
+                  </div>
+                  <div class="button-group"><i id="detail-button" class="material-icons">bookmark</i><i class="material-icons">more</i></div>
+               </div>
+            </div>
+            <div class="movie-card">
+               <img src="https://image.tmdb.org/t/p/w400/hhvMTxlTZtnCOe7YFhod9uz3m37.jpg023355b94bf23acecb09880fb168a0d4" alt="Movie poster is not visible">
+               <div class="movie-right">
+                  <div class="movie-content">
+                     <div class="movie-content-left">
+                        <h3 class="movie-title">Code 8 Part II</h3>
+                        <div class="genres">
+                           <p>Action</p>
+                           <p>Crime</p>
+                           <p>Science Fiction</p>
+                        </div>
+                        <p>2024-02-27</p>
+                     </div>
+                     <div class="popularity">
+                        <i class="material-icons">star</i>
+                        <p>660.443</p>
+                     </div>
+                  </div>
+                  <div class="button-group"><i id="detail-button" class="material-icons">bookmark</i><i class="material-icons">more</i></div>
+               </div>
+            </div>
+         </div>
+         <div class="bookmark">
+            <h2 class="bookmark-title">Bookmarks</h2>
+            <div class="bookmark-list">
+               <div class="bookmark-card">
+                  <img src="https://image.tmdb.org/t/p/w400/gmGK5Gw5CIGMPhOmTO0bNA9Q66c.jpg023355b94bf23acecb09880fb168a0d4">
+                  <h3 class="bookmark-card-title">Godzilla x Kong: The New Empire</h3>
+                  <div class="button-group"><i class="material-icons">more</i><i class="material-icons remove-bookmark">delete</i></div>
+               </div>
+               <hr class="bookmark-line">
+            </div>
+         </div>
+      </div>
+      <div class="footer">
+         <p>
+         <p>2024 <a href="https://github.com/MustafaTRKYLMZ">Mustafa T</a>. All rights reserved.</p>
+         </p>
+      </div>
+   </body>
+</html>
