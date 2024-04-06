@@ -1,14 +1,4 @@
 import { bookmarkCard } from "./bookmarkCard.js";
-import { removeBookmark } from "./removeBookmark.js";
-
-const onRemoveBookmark = (id) => {
-  removeBookmark(id);
-  // const bookmarkDiv = document.querySelector(".bookmark");
-  // bookmarkDiv.innerHTML = "";
-
-  // const mobilSidebarContent = document.querySelector(".mobil-sidebar-content");
-  // mobilSidebarContent.innerHTML = "";
-};
 
 function bookmarkView(bookmarkList, bookmarkDiv) {
   // bookmark title
