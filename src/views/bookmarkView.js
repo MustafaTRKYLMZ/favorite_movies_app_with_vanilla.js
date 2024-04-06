@@ -2,13 +2,12 @@ import { bookmarkCard } from "./bookmarkCard.js";
 import { removeBookmark } from "./removeBookmark.js";
 
 const onRemoveBookmark = (id) => {
-  const newBookmarkList = removeBookmark(id);
-  const bookmarkDiv = document.querySelector(".bookmark");
-  bookmarkDiv.innerHTML = "";
-  bookmarkView(newBookmarkList, bookmarkDiv);
-  const mobilSidebarContent = document.querySelector(".mobil-sidebar-content");
-  mobilSidebarContent.innerHTML = "";
-  bookmarkView(newBookmarkList, mobilSidebarContent);
+  removeBookmark(id);
+  // const bookmarkDiv = document.querySelector(".bookmark");
+  // bookmarkDiv.innerHTML = "";
+
+  // const mobilSidebarContent = document.querySelector(".mobil-sidebar-content");
+  // mobilSidebarContent.innerHTML = "";
 };
 
 function bookmarkView(bookmarkList, bookmarkDiv) {
@@ -20,7 +19,7 @@ function bookmarkView(bookmarkList, bookmarkDiv) {
   const bookmarkListDiv = document.createElement("div");
   bookmarkListDiv.classList.add("bookmark-list");
   bookmarkList.forEach((bookmark) => {
-    bookmarkCard(bookmark, bookmarkListDiv, onRemoveBookmark);
+    bookmarkCard(bookmark, bookmarkListDiv);
   });
   bookmarkDiv.append(bookmarkListDiv);
 }

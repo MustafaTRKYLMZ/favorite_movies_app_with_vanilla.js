@@ -1,0 +1,33 @@
+welcomePage
+headerView
+  mobilHeaderView
+    mobilSidebarView
+      categoryListView
+        movieListView
+          movieCard
+          fetchData
+          setResult
+        getMoviesByCategory
+          movieListView
+      bookmarkView
+        removeBookmark
+      getCategoriesByMovies
+      setResult
+  searchMovie
+contentBodyView
+refreshMovies
+  setResult
+  fetchData
+movieListView
+  movieCard
+    createBookmark
+  fetchData
+  setResult
+setResult
+leftSidebar
+  leftSidebarView
+  getCategoriesByMovies
+  setResult
+bookmark
+  bookmarkView
+    removeBookmark
