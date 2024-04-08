@@ -1,9 +1,12 @@
-import { removeBookmark, movieDetail } from "../pages/index.js";
+import { movieDetail } from "./movieDetail.js";
 import { getImageUrl } from "../data/getImageUrl.js";
+import { removeBookmark } from "./removeBookmark.js";
 
 export const bookmarkCard = (bookmark, bookmarkListDiv) => {
   const bookmarkCardDiv = document.createElement("div");
   bookmarkCardDiv.classList.add("bookmark-card");
+  bookmarkCardDiv.setAttribute("data-id", bookmark.id);
+
   // bookmark image
   const imageUrl = getImageUrl(bookmark.poster_path);
 

@@ -1,8 +1,8 @@
 import { getImageUrl } from "../data/index.js";
-import { createBookmark, movieDetail } from "../pages/index.js";
+import { createBookmark } from "./createBookmark.js";
+import { movieDetail } from "./movieDetail.js";
 
 export const movieCard = async (movie, movieList, categories) => {
-  // const categories = await getCategoriesByMovies(movie);
   // image url
   const imageUrl = getImageUrl(movie.poster_path);
   // movie card
@@ -46,8 +46,8 @@ export const movieCard = async (movie, movieList, categories) => {
 
   // bookmark
   const bookmarkIcon = document.createElement("i");
-  bookmarkIcon.addEventListener("click", createBookmark);
-  bookmarkIcon.value = movie.id;
+  bookmarkIcon.addEventListener("click", () => createBookmark(movie.id));
+  // bookmarkIcon.value = movie.id;
   bookmarkIcon.setAttribute("id", "bookmark-button");
   bookmarkIcon.classList.add("material-icons");
   bookmarkIcon.append("bookmark");

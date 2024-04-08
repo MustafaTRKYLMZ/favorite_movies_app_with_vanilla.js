@@ -1,9 +1,7 @@
-// import { mobilCategoriesView } from "./mobilCategoriesView.js";
-// import { mobilBookmarksView } from "./mobilBookmarksView.js";
 import { categoryListView } from "./categoryListView.js";
-import { bookmarkView } from "./bookmarkView.js";
+import bookmarkView from "./bookmarkView.js";
 import { getCategoriesByMovies } from "../data/index.js";
-import { setResult } from "../pages/setResult.js";
+import { setResult } from "./setResult.js";
 
 export const mobilSidebarView = async (headerDiv) => {
   // mobil navbar
@@ -68,7 +66,8 @@ export const mobilSidebarView = async (headerDiv) => {
         categoryListView(categories, mobilSidebarContentDiv);
       } else {
         // bookmarks
-        const bookmarkList = JSON.parse(localStorage.getItem("bookmarkList")) || [];
+        const bookmarkList =
+          JSON.parse(localStorage.getItem("bookmarkList")) || [];
         mobilSidebarContentDiv.innerHTML = "";
         bookmarkView(bookmarkList, mobilSidebarContentDiv);
       }

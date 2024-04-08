@@ -1,5 +1,5 @@
 import { movieListView } from "./movieListView.js";
-import { getMoviesByCategory } from "../pages/index.js";
+import { getMoviesByCategory } from "./getMoviesByCategory.js";
 
 export const categoryListView = (categorys, mobilSidebarContentDiv) => {
   const categoryListDiv = document.createElement("div");
