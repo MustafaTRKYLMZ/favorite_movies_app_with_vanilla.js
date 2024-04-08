@@ -9,12 +9,13 @@ export const fetchData = async (apiUrl) => {
       "Content-Type": "application/json",
     },
   });
+
   if (response.ok) {
     return response.json();
   }
   setResult(
     ".error",
-    `HTTP network error ${response.status} ${response.statusText}`,
+    `HTTP network error ${response.status} ${response.statusText}`
   );
   throw new Error(`HTTP Error ${response.status}:  ${response.statusText}`);
 };

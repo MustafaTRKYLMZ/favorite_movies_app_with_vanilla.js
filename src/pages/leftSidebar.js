@@ -3,9 +3,8 @@ import { getCategoriesByMovies } from "../data/index.js";
 import { setResult } from "./setResult.js";
 
 export const leftSidebar = async (movies) => {
-  let categories = [];
   try {
-    categories = await getCategoriesByMovies(movies);
+    let categories = await getCategoriesByMovies(movies);
     leftSidebarView(categories);
   } catch (error) {
     console.log("error >>>>", error);
