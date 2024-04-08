@@ -1,4 +1,4 @@
-import { setResult } from "../pages/setResult.js";
+import { setResult } from "../views/setResult.js";
 import { accessToken, apiKey } from "./key.js";
 
 export const fetchData = async (apiUrl) => {
@@ -9,12 +9,13 @@ export const fetchData = async (apiUrl) => {
       "Content-Type": "application/json",
     },
   });
+
   if (response.ok) {
     return response.json();
   }
   setResult(
     ".error",
-    `HTTP network error ${response.status} ${response.statusText}`,
+    `HTTP network error ${response.status} ${response.statusText}`
   );
   throw new Error(`HTTP Error ${response.status}:  ${response.statusText}`);
 };

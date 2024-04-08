@@ -1,11 +1,14 @@
-import { refreshMovies } from "../data/index.js";
-import { headerView, contentBodyView, movieListView } from "../views/index.js";
-import { leftSidebar } from "./leftSidebar.js";
-import { bookmark } from "./bookmark.js";
-import { setResult } from "./setResult.js";
+import { refreshMovies, getCategoriesByMovies } from "../data/index.js";
+import { headerView } from "../views/headerView.js";
+import { contentBodyView } from "../views/contentBodyView.js";
+import { movieListView } from "../views/movieListView.js";
+import { leftSidebarView } from "../views/leftSidebarView.js";
+import { bookmark } from "../views/bookmark.js";
+import { setResult } from "../views/setResult.js";
 
 export const welcomePage = async () => {
   const localMovies = JSON.parse(localStorage.getItem("moviesList"));
+  const categories = await getCategoriesByMovies(localMovies);
 
   headerView();
   contentBodyView();
@@ -13,14 +16,15 @@ export const welcomePage = async () => {
   if (!localMovies) {
     try {
       const newMovies = await refreshMovies();
-      leftSidebar(newMovies);
-      movieListView(newMovies);
+      leftSidebarView(categories);
+      movieListView(newMovies, categories);
     } catch (error) {
       setResult(".error", error.message);
       throw new Error(error);
     }
   }
-  leftSidebar(localMovies);
-  movieListView(localMovies);
+  // leftSidebar(localMovies);
+  leftSidebarView(categories);
+  movieListView(localMovies, categories);
   bookmark();
 };

@@ -1,6 +1,6 @@
 import { bookmarkCard } from "./bookmarkCard.js";
 
-export const bookmarkView = (bookmarkList, bookmarkDiv) => {
+function bookmarkView(bookmarkList, bookmarkDiv) {
   // bookmark title
   const bookmarkTitle = document.createElement("h2");
   bookmarkTitle.classList.add("bookmark-title");
@@ -12,4 +12,6 @@ export const bookmarkView = (bookmarkList, bookmarkDiv) => {
     bookmarkCard(bookmark, bookmarkListDiv);
   });
   bookmarkDiv.append(bookmarkListDiv);
-};
+}
+
+export default bookmarkView;

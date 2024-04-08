@@ -1,4 +1,4 @@
-import { setResult } from "../pages/setResult.js";
+import { setResult } from "../views/setResult.js";
 import { fetchData } from "./fetchData.js";
 import { getGenres } from "./getGenres.js";
 
@@ -7,9 +7,10 @@ export const getCategoriesByMovies = async (movies) => {
   if (movies) {
     genres = getGenres(movies);
   }
+  // fetch category
   try {
     const response = await fetchData(
-      "https://api.themoviedb.org/3/genre/movie/list",
+      "https://api.themoviedb.org/3/genre/movie/list"
     );
 
     return response.genres.filter((genre) => genres.includes(genre.id));

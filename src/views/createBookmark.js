@@ -1,13 +1,11 @@
-import { bookmarkView } from "../views/index.js";
 import { setResult } from "./setResult.js";
+import { bookmarkCard } from "./bookmarkCard.js";
 
-export const createBookmark = (event) => {
+export const createBookmark = (id) => {
   const movies = JSON.parse(localStorage.getItem("moviesList")) || [];
-  const selectedMovie = movies.filter((movie) => {
-    if (Number(movie.id) === Number(event.target.value)) {
-      return movie;
-    }
-  });
+  const selectedMovie = movies.filter(
+    (movie) => Number(movie.id) === Number(id)
+  );
   const bookmarkList = JSON.parse(localStorage.getItem("bookmarkList")) || [];
   const newBookmarkList = [...bookmarkList, ...selectedMovie];
   const bookmarkDiv = document.querySelector(".bookmark");
@@ -15,27 +13,25 @@ export const createBookmark = (event) => {
 
   if (selectedMovie.length > 0) {
     const isBookmarked = bookmarkList.find(
-      (movie) => movie.id === selectedMovie[0].id,
+      (movie) => movie.id === selectedMovie[0].id
     );
+
     if (isBookmarked) {
       const error = `${isBookmarked.title} is already bookmarked`;
       setResult(".error", error);
       throw new Error(`${isBookmarked.title} is already bookmarked`);
     }
     setResult(".info", `${selectedMovie[0].title} is bookmarked`);
-    bookmarkDiv.innerHTML = "";
     localStorage.setItem("bookmarkList", JSON.stringify(newBookmarkList));
-    bookmarkView(newBookmarkList, bookmarkDiv);
-    // mobil bookmark list
-    mobilSidebarContent.innerHTML = "";
-    bookmarkView(newBookmarkList, mobilSidebarContent);
+
+    const bookmarkListDiv = document.querySelector(".bookmark-list");
+    bookmarkCard(selectedMovie[0], bookmarkListDiv);
   } else {
     setResult(".info", `${selectedMovie[0].title} is bookmarked`);
     bookmarkDiv.innerHTML = "";
     localStorage.setItem("bookmarkList", JSON.stringify(selectedMovie));
     mobilSidebarContent.innerHTML = "";
-    // mobil bookmark list
-    bookmarkView(newBookmarkList, bookmarkDiv);
-    bookmarkView(newBookmarkList, mobilSidebarContent);
+    const bookmarkListDiv = document.querySelector(".bookmark-list");
+    bookmarkCard(selectedMovie, bookmarkListDiv);
   }
 };
